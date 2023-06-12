@@ -17,4 +17,7 @@
 	  <ProjectReference Include="..\BlazorShared\BlazorShared.csproj" />
 	</ItemGroup>
 
+	<PropertyGroup>
+	    <PublishTrimmed>false</PublishTrimmed>
+	</PropertyGroup>
 </Project>
