@@ -9,11 +9,11 @@ components:
       - exposure: public
         name: web
         protocol: https
-        targetPort: 44315
+        targetPort: 5000
       - exposure: public
         name: api
         protocol: https
-        targetPort: 5099
+        targetPort: 5098
       image: registry.redhat.io/devspaces/udi-rhel8:3.5
       memoryLimit: 4G
       cpuLimit: 8000m
@@ -32,12 +32,12 @@ commands:
       component: tools
       group:
         kind: run
-      workingDir: ${PROJECTS_ROOT}/src/Web/
+      workingDir: ${PROJECTS_ROOT}/eshoponweb/src/Web/
     id: run-web
   - exec:
       commandLine: dotnet run
       component: tools
       group:
         kind: run
-      workingDir: ${PROJECTS_ROOT}/src/PublicApi/
+      workingDir: ${PROJECTS_ROOT}/eshoponweb/src/PublicApi/
     id: run-api
