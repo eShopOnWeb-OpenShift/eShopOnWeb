@@ -1,5 +1,7 @@
 # Microsoft eShopOnWeb ASP.NET Core Application for Red Hat OpenShift
 
+[![Contribute](https://www.eclipse.org/che/contribute.svg)](https://devspaces.apps.sno.itix.dev/f?url=https://github.com/nmasse-itix/eShopOnWeb)
+
 Sample ASP.NET Core reference application, powered by Microsoft, demonstrating a single-process (monolithic) application architecture and deployment model. If you're new to .NET development, read the [Getting Started for Beginners](https://github.com/dotnet-architecture/eShopOnWeb/wiki/Getting-Started-for-Beginners) guide.
 
 A list of Frequently Asked Questions about this repository can be found [here](https://github.com/dotnet-architecture/eShopOnWeb/wiki/Frequently-Asked-Questions).

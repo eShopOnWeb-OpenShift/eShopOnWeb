@@ -1,0 +1,38 @@
+schemaVersion: 2.2.0
+metadata:
+  name: eshop
+components:
+  - attributes:
+      controller.devfile.io/merge-contribution: true
+    container:
+      endpoints:
+        - exposure: public
+          name: hello-endpoint
+          protocol: http
+          targetPort: 5032
+      image: registry.redhat.io/devspaces/udi-rhel8:3.5
+      memoryLimit: 2Gi
+      mountSources: true
+      sourceMapping: /projects
+      volumeMounts:
+        - name: nuget
+          path: /home/user/.nuget
+    name: tools
+  - name: nuget
+    volume:
+      size: 1G
+commands:
+  - exec:
+      commandLine: dotnet run web
+      component: tools
+      group:
+        kind: run
+      workingDir: ${PROJECTS_ROOT}/src/Web/
+    id: run-web
+  - exec:
+      commandLine: dotnet run api
+      component: tools
+      group:
+        kind: run
+      workingDir: ${PROJECTS_ROOT}/src/PublicApi/
+    id: run-web
