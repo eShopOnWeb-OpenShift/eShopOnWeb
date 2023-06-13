@@ -25,19 +25,19 @@ components:
     name: tools
   - name: nuget
     volume:
-      size: 1G
+      size: 10G
 commands:
   - exec:
-      commandLine: dotnet run web
+      commandLine: dotnet run
       component: tools
       group:
         kind: run
       workingDir: ${PROJECTS_ROOT}/src/Web/
     id: run-web
   - exec:
-      commandLine: dotnet run api
+      commandLine: dotnet run
       component: tools
       group:
         kind: run
       workingDir: ${PROJECTS_ROOT}/src/PublicApi/
-    id: run-web
+    id: run-api
