@@ -6,12 +6,17 @@ components:
       controller.devfile.io/merge-contribution: true
     container:
       endpoints:
-        - exposure: public
-          name: hello-endpoint
-          protocol: http
-          targetPort: 5032
+      - exposure: public
+        name: web
+        protocol: http
+        targetPort: 5032
+      - exposure: public
+        name: api
+        protocol: http
+        targetPort: 5033
       image: registry.redhat.io/devspaces/udi-rhel8:3.5
-      memoryLimit: 2Gi
+      memoryLimit: 4G
+      cpuLimit: 8000m
       mountSources: true
       sourceMapping: /projects
       volumeMounts:
