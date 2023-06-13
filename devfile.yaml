@@ -8,12 +8,12 @@ components:
       endpoints:
       - exposure: public
         name: web
-        protocol: http
-        targetPort: 5032
+        protocol: https
+        targetPort: 44315
       - exposure: public
         name: api
-        protocol: http
-        targetPort: 5033
+        protocol: https
+        targetPort: 5099
       image: registry.redhat.io/devspaces/udi-rhel8:3.5
       memoryLimit: 4G
       cpuLimit: 8000m
