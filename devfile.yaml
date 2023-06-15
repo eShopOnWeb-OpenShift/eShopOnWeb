@@ -1,6 +1,6 @@
 schemaVersion: 2.2.0
 metadata:
-  name: eshop
+  name: eshoponweb
 components:
   - attributes:
       controller.devfile.io/merge-contribution: true
